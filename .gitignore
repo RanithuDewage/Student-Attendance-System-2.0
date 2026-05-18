@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+
+# Logs
+logs/
+*.log
+
+# Backups and temp files
+backups/
+*.zip
+*.rar
+*.7z
+
+# Reports generated files
+reports/*.pdf
+
+# Database files if you don't want to expose them
+*.db
+*.sqlite3
+
+# Environment / secrets
+.env
+config.local.py
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary media / cache
+*.tmp
