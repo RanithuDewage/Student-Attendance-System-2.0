@@ -1,133 +1,228 @@
-# Student Attendance System 2.0
+<div align="center">
 
-A smart **desktop-based attendance management system** built with **Python**, designed to automate student attendance using **face recognition**, live monitoring, reporting, backup/restore, and notification features.
+# 🎓 Student Attendance System 2.0
 
-Developed by **Team NoCtraX**
+### Smart Attendance. Real-Time Recognition. Simplified Management.
 
----
+**An intelligent desktop-based attendance management system powered by Python and Computer Vision.**
 
-## Overview
+Developed with ❤️ by **Team NoCtraX**
 
-**Student Attendance System 2.0** is a modern and efficient attendance solution developed to replace traditional manual attendance methods.  
-The system provides a complete workflow for:
+<br>
 
-- student registration
-- face sample collection
-- model training
-- live attendance marking
-- daily/monthly reporting
-- PDF export
-- database backup and restore
-- email and Telegram notifications
-- secure admin management
-- customizable system settings
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-111F68?style=for-the-badge&logo=ultralytics&logoColor=white)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-orange?style=for-the-badge)
 
-The project combines **computer vision**, **database management**, **graphical user interface development**, and **automation** into one practical application suitable for educational institutions and academic environments.
+<br>
+
+**Automate attendance • Recognize faces • Generate reports • Manage records**
+
+</div>
 
 ---
 
-## Key Features
+## 📌 Table of Contents
 
-### Secure Admin Login
-- Protected login interface for authorized access
-- Remember username option
-- Secure credential-based authentication
-
-### Dashboard with Live Statistics
-- Total Students
-- Present
-- Late
-- Absent
-- Unknown Faces
-- Today’s status overview
-- Weekly attendance summary
-
-### Student Management
-- Add new students
-- Update student details
-- Delete student records
-- Search students
-- Manage active/inactive status
-- Store profile photos and batch information
-
-### Face Capture and Training
-- Capture face samples from camera
-- Add photos from file
-- Train recognition model
-- Reload model when needed
-- Generate QR code fallback support
-
-### Live Attendance Marking
-- Real-time face recognition
-- Automatic attendance marking
-- Status categories:
-  - Present
-  - Late
-  - Absent
-  - Unknown
-- Session-based attendance support
-
-### Attendance Records
-- View daily attendance logs
-- Filter by date, session, and status
-- Search attendance records
-- Manual attendance marking
-- Delete selected rows
-- Live attendance counters
-
-### Reports
-- Daily attendance report
-- Monthly attendance report
-- Monthly summary table
-- PDF export support
-
-### Backup and Restore
-- Create full system backup
-- Restore database and related files from backup
-
-### Notifications
-- Email support using SMTP
-- Telegram bot integration
-- Test message support
-
-### Settings and Customization
-- Theme selection
-- Class start time
-- Grace minutes
-- Camera index
-- Face threshold
-- Current session
-- Unknown face beep
-- Liveness check
-- QR fallback
-- SMTP email settings
-- Telegram settings
-- Admin account management
-- Password change support
+- [📖 About the Project](#-about-the-project)
+- [✨ Key Features](#-key-features)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [🏗️ Project Architecture](#️-project-architecture)
+- [📸 Screenshots](#-screenshots)
+- [⚙️ Installation and Setup](#️-installation-and-setup)
+- [🚀 How to Use](#-how-to-use)
+- [🔧 Configuration](#-configuration)
+- [🔐 Security and Privacy](#-security-and-privacy)
+- [🗺️ Future Improvements](#️-future-improvements)
+- [🤝 Contributing](#-contributing)
+- [🙏 Acknowledgements](#-acknowledgements)
+- [📄 License](#-license)
+- [📬 Connect With Me](#-connect-with-me)
 
 ---
 
-## Technology Stack
+## 📖 About the Project
 
-- **Python**
-- **Tkinter** / Custom GUI
-- **OpenCV**
-- **OpenCV Contrib (LBPH Face Recognition)**
-- **SQLite**
-- **Matplotlib**
-- **Pillow**
-- **ReportLab**
-- **qrcode**
-- **requests**
-- **SMTP Email**
-- **Telegram Bot API**
-- **YOLOv8** (`yolov8n.pt`)
+**Student Attendance System 2.0** is a Python-based desktop application
+designed to modernize student attendance management through computer
+vision, face recognition, database management, and automation.
+
+Traditional attendance systems often require manual record-keeping,
+which can be time-consuming and difficult to manage.
+
+This project provides an integrated solution that helps educational
+institutions manage student information, record attendance, monitor
+daily statistics, generate reports, and maintain database backups
+through a graphical user interface.
+
+The system combines face recognition with attendance tracking and
+administrative tools to create a centralized attendance management
+workflow.
+
+### 🎯 Project Objectives
+
+- Automate student attendance recording.
+- Reduce repetitive manual attendance tasks.
+- Simplify student information management.
+- Provide real-time attendance monitoring.
+- Generate daily and monthly attendance reports.
+- Improve data management through backup and restore tools.
+- Support administrative notifications and configurable settings.
+
+### 💡 Project Highlights
+
+| Capability | Description |
+|---|---|
+| 🧠 Computer Vision | Face detection and recognition |
+| ⚡ Automation | Automatic attendance recording |
+| 📊 Analytics | Attendance statistics and summaries |
+| 📄 Reporting | Daily and monthly reports with PDF export |
+| 🗄️ Database | Structured data storage using SQLite |
+| 🔔 Notifications | Email and Telegram integration |
+| 💾 Data Recovery | Database and file backup/restore |
+| 🖥️ Desktop GUI | Interactive graphical interface |
 
 ---
 
-## Project Structure
+## ✨ Key Features
 
-```bash
+### 🔐 1. Secure Admin Authentication
+
+- Administrator login interface.
+- Credential-based authentication.
+- Remember username option.
+- Password change functionality.
+- Administrative account management.
+
+### 📊 2. Interactive Dashboard
+
+- Total registered students.
+- Present, late, and absent statistics.
+- Unknown face count.
+- Daily attendance overview.
+- Weekly attendance summary.
+- Live attendance counters.
+
+### 👨‍🎓 3. Student Management
+
+- Register new students.
+- Update student information.
+- Delete student records.
+- Search and manage student profiles.
+- Store student IDs, names, emails, and departments.
+- Organize students by batch.
+- Activate or deactivate student records.
+- Manage student profile photographs.
+
+### 📷 4. Face Capture and Model Training
+
+- Capture face samples using a camera.
+- Import student photographs from files.
+- Train the face recognition model.
+- Reload the trained model when required.
+- Generate QR codes for fallback workflows.
+
+### 🧠 5. Live Attendance Recognition
+
+- Real-time face detection and recognition.
+- Automatic attendance recording.
+- Configurable attendance status handling.
+- Present, late, absent, and unknown categories.
+- Session-based attendance support.
+- Unknown-face alerts and optional beep notifications.
+
+### 📝 6. Attendance Record Management
+
+- View attendance records.
+- Filter records by date, session, and status.
+- Search attendance entries.
+- Mark attendance manually.
+- Delete selected records.
+- Monitor attendance counts in real time.
+
+### 📈 7. Reports and Analytics
+
+- Daily attendance reports.
+- Monthly attendance reports.
+- Monthly summary tables.
+- PDF report generation.
+- Attendance statistics for administrative review.
+
+### 💾 8. Backup and Restore
+
+- Create system backups.
+- Preserve database and related application files.
+- Restore data from available backups.
+
+**Important:** Always create a separate backup before restoring data.
+Restoring an older backup may overwrite newer records.
+
+### 🔔 9. Email and Telegram Notifications
+
+- SMTP-based email integration.
+- Telegram Bot API integration.
+- Configurable notification settings.
+- Test notification functionality.
+
+### ⚙️ 10. Customizable Settings
+
+- Application theme.
+- Class start time.
+- Attendance grace period.
+- Camera index.
+- Face recognition threshold.
+- Current attendance session.
+- Unknown-face sound alerts.
+- Liveness-check settings.
+- QR fallback options.
+- SMTP configuration.
+- Telegram bot configuration.
+- Administrator and password settings.
+
+---
+
+## 🛠️ Technology Stack
+
+The project uses the following technologies and libraries.
+
+| Technology | Purpose |
+|---|---|
+| Python | Core application logic |
+| Tkinter | Desktop graphical user interface |
+| OpenCV | Computer vision and image processing |
+| OpenCV Contrib | LBPH face recognition functionality |
+| SQLite | Local database management |
+| YOLOv8 | Object detection model integration |
+| Pillow | Image processing and display |
+| Matplotlib | Charts and attendance visualization |
+| ReportLab | PDF report generation |
+| qrcode | QR code generation |
+| requests | HTTP requests and API integration |
+| SMTP | Email notifications |
+| Telegram Bot API | Telegram messaging integration |
+
+### 🧠 Face Recognition
+
+The project uses OpenCV's LBPH face recognition functionality
+for facial recognition.
+
+The application also includes a YOLOv8 model file
+(`yolov8n.pt`) for object detection-related functionality.
+
+**Note:** YOLOv8 object detection and LBPH face recognition serve
+different purposes. Their exact roles depend on how they are
+integrated into the application's source code.
+
+---
+
+## 🏗️ Project Architecture
+
+The application is organized into separate Python modules to make
+the codebase easier to understand and maintain.
+
+```text
 student-attendance-system/
 │
 ├── backups/
@@ -150,214 +245,81 @@ student-attendance-system/
 ├── yolov8n.pt
 └── README.md
 
-## File Description
+---
 
-- main.py – Main entry point of the application
-- gui_app.py – Graphical user interface logic
-- auth.py – Authentication and login handling
-- db.py – Database connection and queries
-- attendance_manager.py – Attendance processing logic
-- face_utils.py – Face detection and recognition utilities
-- mailer.py – Email handling
-- reports.py – Report generation and export
-- phase2_tools.py – Additional supporting tools
-- config.py – Configuration and settings
-- yolov8n.pt – YOLOv8 model file
-- requirements.txt – Python dependencies
+## 📸 Screenshots
 
-## Screenshots
+Explore the interface and key features of Student Attendance System 2.0.
 
-- Login Screen
-- Dashboard
-- Student Management
-- Capture & Train
-- Attendance
-- Reports
-- Settings
+> 📌 Add your actual application screenshots to the `screenshots/` directory and update the image paths below if necessary.
 
-## Installation
+### 🔐 Login Screen
 
-1. Clone the Repository
-git clone https://github.com/your-username/student-attendance-system.git
-cd student-attendance-system
+Secure administrator login interface.
 
-2. Create a Virtual Environment
-python -m venv .venv
+![Login Screen](screenshots/login.png)
 
-3. Activate the Virtual Environment
-Windows
-.venv\Scripts\activate
-macOS / Linux
-source .venv/bin/activate
+### 📊 Dashboard
 
-4. Install Dependencies
-pip install -r requirements.txt
+Monitor attendance statistics and daily activity from a centralized dashboard.
 
-5. Run the Application
-python main.py
+![Dashboard](screenshots/dashboard.png)
 
-## Configuration
+### 👨‍🎓 Student Management
 
-Before running the project, make sure the following settings are configured properly:
+Register, update, search, and manage student information.
 
-- Camera index
-- Face threshold
-- Class start time
-- Grace minutes
-- Email sender details
-- Telegram bot token
-- Telegram chat ID
-- Session name
-- Theme preference
+![Student Management](screenshots/students.png)
 
-## Important Security Note
+### 📷 Capture & Train
 
-Do not commit sensitive information such as:
+Capture facial samples and prepare the recognition model.
 
-- email passwords
-- Telegram bot tokens
-- API keys
-- admin passwords
-- Use local configuration files or environment variables for secret values.
+![Capture and Train](screenshots/capture-train.png)
 
-## Usage Guide
+### 📝 Attendance Management
 
-1. Login
-Open the application and sign in using admin credentials.
+Monitor attendance records and manage attendance sessions.
 
-2. Manage Students
-Go to the Students tab and add student details such as:
+![Attendance Management](screenshots/attendance.png)
 
-- Student ID
-- Name
-- Email
-- Department
-- Batch
-- Profile Photo
-3. Capture Face Samples
-Use the Capture & Train tab to:
+### 📈 Reports
 
-collect face images from the camera
-upload photos from file
-generate QR codes if required
-4. Train the Model
-Train the recognition model after collecting enough samples for each student.
+Generate attendance summaries and export reports as PDF files.
 
-5. Start Attendance
-Open the Attendance tab and start live preview.
-The system will detect faces and mark attendance automatically.
+![Reports](screenshots/reports.png)
 
-6. Review Reports
-Use the Reports tab to:
+### ⚙️ Settings
 
-generate daily reports
-generate monthly reports
-export monthly PDF files
-7. Backup and Restore
-Use the backup tools to secure your data and restore it whenever needed.
+Configure application preferences and notification settings.
 
-8. Update System Settings
-Use the Settings tab to configure:
+![Settings](screenshots/settings.png)
 
-theme
-class time
-camera
-email
-Telegram
-admin accounts
-password changes
+---
 
-##Core Modules
+## ⚙️ Installation and Setup
 
-Dashboard
-Shows live system statistics and attendance analytics.
+Follow this guide to clone, configure, and run Student Attendance System 2.0 on your computer.
 
-Students
-Handles student record creation, editing, searching, and deletion.
+### 📋 Prerequisites
 
-Capture & Train
-Manages face sample collection, photo uploads, model training, and QR generation.
+Before installing the application, make sure you have:
 
-Attendance
-Supports live attendance marking, manual updates, filtering, and record management.
+- 🐍 Python installed.
+- 🔧 Git installed.
+- 📷 A compatible webcam for live attendance.
+- 💻 An operating system compatible with the application's dependencies.
+- 📦 Access to the project's required files and dependencies.
 
-Reports
-Generates daily/monthly reports and monthly PDF summaries.
+**Recommended:** Windows 10 or Windows 11.
 
-Settings
-Controls system configuration, admin management, notifications, and custom preferences.
+> ⚠️ Python and package versions must be compatible with the dependencies specified by the project.
 
-## Features in Summary
+### 1️⃣ Clone the Repository
 
-Secure admin login
-Student record management
-Face sample capture
-Face recognition-based attendance
-Live dashboard analytics
-Manual and automatic attendance marking
-Attendance filtering and search
-Monthly PDF report export
-Backup and restore system
-Email and Telegram alerts
-Theme customization
-Modular code architecture
+Open your terminal or command prompt.
 
-## Future Enhancements
+Run the following command using your actual repository URL:
 
-Possible future improvements include:
-
-Web-based version
-Cloud database integration
-Mobile companion app
-SMS notifications
-Multi-camera support
-Excel export
-Role-based user access
-Improved AI recognition accuracy
-Real-time analytics dashboard
-
-## Security & Privacy
-
-This system is intended for educational and internal use.
-
-Best practices:
-
-Do not upload real passwords or bot tokens to GitHub
-Keep backups in a secure location
-Restrict admin access
-Review logs regularly
-Remove test data before public release
-
-## Acknowledgements
-
-Special thanks to the technologies and libraries that made this project possible:
-
-Python
-OpenCV
-Tkinter
-SQLite
-Pillow
-Matplotlib
-ReportLab
-qrcode
-requests
-Telegram Bot API
-YOLOv8
-Also thanks to Team RushX for the development and support behind this project.
-
-## License
-
-This project is shared for educational and demonstration purposes.
-
-If you want to make it open source, you may add a license such as:
-
-MIT License
-Apache 2.0
-GNU GPL v3
-
-## Contact
-
-Project Name: Student Attendance System 2.0
-Team: NoCtraX
-
-For collaboration, feedback, or improvement suggestions, feel free to connect through GitHub.
+```bash
+git clone https://github.com/YOUR-USERNAME/student-attendance-system.git
